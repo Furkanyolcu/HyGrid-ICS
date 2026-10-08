@@ -3,6 +3,7 @@
 ## A Hybrid Cyber-Physical Security Dataset for SCADA-Based Industrial Control Systems
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23250468.svg)](https://doi.org/10.5281/zenodo.23250468)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
 [![OpenDSS](https://img.shields.io/badge/Simulator-OpenDSS-green.svg)](https://sourceforge.net/projects/electricdss/)
 
@@ -139,13 +140,13 @@ python masterrunner.py --only-network
 python run_single_attack.py
 ```
 
-Requires `pymodbus`, and (on the Kali-MON node) a working Zeek installation with the included `custom_window.zeek` policy script for 200 ms feature aggregation.
+Requires `pymodbus`, and (on the Kali-MON node) a working Zeek installation with its standard/default logging (`conn.log`, `modbus.log`) - no custom policy script is required; the 200 ms feature aggregation is performed afterward by `fusion.py`.
 
 ---
 
 ## Data Availability
 
-The HyGrid-ICS dataset is publicly available at **[DOI LINK - TO BE ADDED]**. The archive includes:
+The HyGrid-ICS dataset is publicly available at **https://doi.org/10.5281/zenodo.23250468**. The archive includes:
 - The final fused dataset (`scada_cps_dataset.csv`)
 - Raw physical telemetry and network logs (`.pcap`, Zeek `conn.log`/`modbus.log`)
 - This repository's attack scripts, Zeek policy script, and Node-RED flow export (`.json`)
